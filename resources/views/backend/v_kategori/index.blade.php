@@ -27,18 +27,13 @@ Tambah</button>
                                 <td> {{ $loop->iteration }} </td> 
                                 <td> {{$row->nama_kategori}} </td> 
                                 <td> 
-                                    <a href="{{ route('backend.kategori.edit', $row->id) 
-}}" title="Ubah Data"> 
-                                        <button type="button" class="btn btn-cyan btn
-sm"><i class="far fa-edit"></i> Ubah</button> 
+                                    <a href="{{ route('backend.kategori.edit', $row->id) }}" title="Ubah Data"> 
+                                        <button type="button" class="btn btn-cyan btn sm"><i class="far fa-edit"></i> Ubah</button> 
                                     </a> 
- 
-                                    <form method="POST" action="{{ 
-route('backend.kategori.destroy', $row->id) }}" style="display: inline-block;"> 
+                                    <form method="POST" action="{{ route('backend.kategori.destroy', $row->id) }}" style="display: inline-block;"> 
                                         @method('delete') 
                                         @csrf 
-                                        <button type="submit" class="btn btn-danger btn-sm 
-show_confirm" data-konf-delete="{{ $row->nama_kategori}}" title='Hapus Data'> 
+                                        <button type="submit" class="btn btn-danger btn-sm show_confirm" data-konf-delete="{{ $row->nama_kategori}}" title='Hapus Data'> 
                                             <i class="fas fa-trash"></i> Hapus</button> 
                                     </form> 
                                 </td> 

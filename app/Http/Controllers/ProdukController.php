@@ -312,7 +312,7 @@ class ProdukController extends Controller
      $detail = Produk::findOrFail($id); 
      $kategori = Kategori::orderBy('nama_kategori', 'desc')->get(); 
      return view('v_produk.detail', [ 
-         judul => 'Detail Produk', 
+         'judul' => 'Detail Produk', 
          'kategori' => $kategori, 
          'row' => $detail, 
          'fotoProdukTambahan' => $fotoProdukTambahan 
